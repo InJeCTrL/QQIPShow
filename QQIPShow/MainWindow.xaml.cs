@@ -120,7 +120,7 @@ namespace QQIPShow
             int i_byte = 0;
             foreach (var DataByte in DataBytes)
             {
-                if (DataByte.Equals(0x02) && DataBytes[i_byte + 1].Equals(0x0) && 
+                if (DataBytes.Length > i_byte + 4 && DataByte.Equals(0x02) && DataBytes[i_byte + 1].Equals(0x0) && 
                     DataBytes[i_byte + 2].Equals(0x48) && DataBytes[i_byte + 3].Equals(0x0) && 
                     DataBytes[i_byte + 4].Equals(0x01))
                 {
